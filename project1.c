@@ -1,41 +1,17 @@
 #include <stdio.h>
-
-int main()
+void main()
 {
-    int a[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};
-    int b[3][3] = {{9,8,7}, {6,5,4}, {3,2,1}};
-    int c[3][3]; int i,j;
+int x[4] = {20,6,10,43};
+int i,y;
 
-    printf("the first matrix:\n");
-    for ( i = 0; i < 3; i++)
+y = x[0];
+for( i = 1; i <= 4; i++)
+{
+    if(x[i] > y)
     {
-        for(j = 0; j < 3; j++)
-        {
-            printf("%d ", a[i][j]);
-        }
-        printf("\n");
+        y = x[i];
     }
-
-    printf("the second matrix:\n");
-    for ( i = 0; i < 3; i++)
-    {
-        for(j = 0; j < 3; j++)
-        {
-            printf("%d ", b[i][j]);
-        }
-        printf("\n");
-    }
-
-    printf("the first matrix plus the second matrix is:\n");
-    for(i = 0; i < 3; i++)
-    {
-        for(j = 0; j < 3; j++)
-        {
-            c[i][j] = a[i][j] - b[i][j];
-            printf("%d\t", c[i][j]);
-        }
-        printf("\n");
-    }
-    
+}
+    printf("%d", y);
 
 }
